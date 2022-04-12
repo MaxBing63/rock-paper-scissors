@@ -13,3 +13,17 @@ function computerPlay() {
 function randomIntFromInterval(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
+
+function playRound(playerSelection, computerSelection) {
+    if(computerSelection === playerSelection) {
+        return 'It\'s a tie'
+    }else if(computerSelection === 'Rock' && playerSelection === 'Scissors') {
+        return 'You Lose! Rock beats Scissors';
+    }else if(computerSelection === 'Scissors' && playerSelection === 'Paper') {
+        return 'You Lose! Scissors beats Paper';
+    }else if(computerSelection === 'Paper' && playerSelection === 'Rock') {
+        return 'You Lose! Paper beats Rock';
+    }else {
+        return `You Win! ${playerSelection} beats ${computerSelection}`;
+    }
+}
