@@ -31,7 +31,7 @@ function playRound(playerSelection, computerSelection) {
 function game() {
     let playerScore = 0;
     let computerScore = 0;
-    for(let i = 0; i < 5; i++) {
+    for(let i = 0; i < randomIntFromInterval(3, 10); i++) {
         let result = playRound(computerPlay(), prompt('Enter Your Choice'));
         if(result.charAt(4) === 'W') {
             playerScore++;
