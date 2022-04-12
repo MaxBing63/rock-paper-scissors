@@ -27,3 +27,27 @@ function playRound(playerSelection, computerSelection) {
         return `You Win! ${playerSelection} beats ${computerSelection}`;
     }
 }
+
+function game() {
+    let playerScore = 0;
+    let computerScore = 0;
+    for(let i = 0; i < 5; i++) {
+        let result = playRound(computerPlay(), prompt('Enter Your Choice'));
+        if(result.charAt(4) === 'W') {
+            playerScore++;
+            console.log(result);
+        }else if(result.charAt(4) === 'L') {
+            computerScore++;
+            console.log(result);
+        }else{
+            console.log(result);
+        }
+    }
+    if(playerScore === computerScore) {
+        console.log('It\'s a tie, not too bad');
+    }else if(playerScore > computerScore) {
+        console.log('You Won! Congrats.'); 
+    }else {
+        console.log('You Lost! better luck next time.')
+    }
+}
