@@ -51,3 +51,11 @@ function game() {
         console.log('You Lost! better luck next time.')
     }
 }
+
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        console.log(playRound(button.textContent, computerPlay()));
+    });
+});
