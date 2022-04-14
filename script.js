@@ -67,4 +67,7 @@ play.addEventListener('click', () => {
     const scissors = document.createElement('button');
     scissors.textContent = 'Scissors';
     buttons.appendChild(scissors);
+    const score = document.createElement('div');
+    score.setAttribute('id', 'score');
+    document.body.appendChild(score);
 })
