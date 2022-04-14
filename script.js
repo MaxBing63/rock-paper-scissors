@@ -55,13 +55,16 @@ function game() {
 const play = document.getElementById('play');
 play.addEventListener('click', () => {
     play.style.display = 'none';
+    const buttons = document.createElement('div');
+    buttons.classList.add('buttons');
+    document.body.appendChild(buttons);
     const rock = document.createElement('button');
     rock.textContent = 'Rock';
-    document.body.appendChild(rock);
+    buttons.appendChild(rock);
     const paper = document.createElement('button');
     paper.textContent = 'Paper';
-    document.body.appendChild(paper);
+    buttons.appendChild(paper);
     const scissors = document.createElement('button');
     scissors.textContent = 'Scissors';
-    document.body.appendChild(scissors);
+    buttons.appendChild(scissors);
 })
