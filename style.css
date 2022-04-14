@@ -5,12 +5,6 @@ body {
     flex-direction: column;
 }
 
-.buttons {
-    display: flex;
-    gap: 30px;
-    margin-top: 100px;
-}
-
 button {
     padding: 5px 20px;
     font-weight: bold;
