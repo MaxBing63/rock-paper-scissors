@@ -10,3 +10,8 @@ button {
     font-weight: bold;
     font-size: 15px;
 }
+
+.buttons {
+    display: flex;
+    gap: 15px;
+}
