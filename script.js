@@ -70,4 +70,19 @@ play.addEventListener('click', () => {
     const score = document.createElement('div');
     score.setAttribute('id', 'score');
     document.body.appendChild(score);
+    const playerScore = document.createElement('div');
+    playerScore.textContent = 'Your Score';
+    playerScore.setAttribute('id', 'playerScore');
+    score.appendChild(playerScore);
+    const computerScore = document.createElement('div');
+    computerScore.textContent = 'Computer Score';
+    computerScore.setAttribute('id', 'computerScore');
+    score.appendChild(computerScore);
+
+    const choices = buttons.querySelectorAll('button');
+    choices.forEach((button) => {
+    button.addEventListener('click', () => {
+        console.log(playRound(button.textContent, computerPlay()));
+    });
+});
 })
